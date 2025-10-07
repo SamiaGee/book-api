@@ -1,18 +1,8 @@
-#!/usr/bin/env php
-<?php
+feat: implement Book API CRUD with Laravel Sanctum authentication
 
-use Illuminate\Foundation\Application;
-use Symfony\Component\Console\Input\ArgvInput;
-
-define('LARAVEL_START', microtime(true));
-
-// Register the Composer autoloader...
-require __DIR__.'/vendor/autoload.php';
-
-// Bootstrap Laravel and handle the command...
-/** @var Application $app */
-$app = require_once __DIR__.'/bootstrap/app.php';
-
-$status = $app->handleCommand(new ArgvInput);
-
-exit($status);
+- Added Book model, migration, and factory
+- Implemented BookController with full CRUD operations
+- Set up API routes using Route::apiResource
+- Configured Laravel Sanctum for API authentication
+- Added validation and JSON error responses
+- Tested all endpoints in Postman
